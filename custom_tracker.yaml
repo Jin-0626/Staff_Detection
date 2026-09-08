@@ -1,0 +1,8 @@
+
+tracker_type: bytetrack
+track_high_thresh: 0.6   # Threshold for the first association step
+track_low_thresh: 0.1    # Threshold for the second association step (catches blurry/distant staff)
+new_track_thresh: 0.6    # Threshold for initiating a brand new tracking ID
+track_buffer: 60         # Keeps an ID alive for 60 frames after they disappear (prevents ID fragmentation)
+match_thresh: 0.6 
+fuse_score: True

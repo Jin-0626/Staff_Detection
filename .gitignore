@@ -1,0 +1,38 @@
+# Local environments and editor state
+/yolo/
+/.venv/
+/venv/
+/.vscode/
+__pycache__/
+*.py[cod]
+.env
+.env.*
+
+# Local inputs and generated outputs
+/dataset/
+/frame/
+/input_video/
+/runs/
+/tmp/
+/weights/
+/AI Evaluation Test.pdf
+*.mp4
+*.avi
+*.cache
+
+# Model binaries (retain only the selected trained checkpoint)
+*.pt
+*.onnx
+*.torchscript
+/yolov26n_staff_*/
+!/yolov26n_staff_2026-09-09_04-32-58_e50_b4/
+/yolov26n_staff_2026-09-09_04-32-58_e50_b4/*
+!/yolov26n_staff_2026-09-09_04-32-58_e50_b4/results.csv
+!/yolov26n_staff_2026-09-09_04-32-58_e50_b4/weights/
+/yolov26n_staff_2026-09-09_04-32-58_e50_b4/weights/*
+!/yolov26n_staff_2026-09-09_04-32-58_e50_b4/weights/best.pt
+
+/output/*
+!/output/pdf/
+/output/pdf/*
+!/output/pdf/staff_detection_solution.pdf
