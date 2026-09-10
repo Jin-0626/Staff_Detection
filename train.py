@@ -8,7 +8,7 @@ def main():
     model_batch = 4
     model_name = f"yolov26n_staff_{current_datetime}_e{model_epoch}_b{model_batch}"
     project_dir = r"D:\Learning\Project\Yolo"
-    dataset_yaml = r"D:\Learning\Project\Yolo\yolo26n.yaml"
+    dataset_yaml = r"D:\Learning\Project\Yolo\data.yaml"
     model = YOLO("yolo26n.pt")
     print("--- Starting Ultralytics YOLOv8 Local Training Run ---")
     

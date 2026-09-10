@@ -99,8 +99,9 @@ def main():
             if any(r.boxes is not None and r.boxes.id is not None for r in predictor.results):
                 raise RuntimeError('Raw-box callback ran after tracking; check Ultralytics callback order')
             raw_snapshot = [box_records(r.boxes) for r in predictor.results]
+        model.track(np.zeros((64, 64, 3), dtype=np.uint8), persist=True)
         # Register BEFORE model.track registers its postprocessing callback.
-        model.add_callback('on_predict_postprocess_end', capture_raw)
+        model.callbacks['on_predict_postprocess_end'].insert(0, capture_raw)
         trails = Trails(a.trail_length)
         if a.save_images:
             (output / 'images').mkdir()
