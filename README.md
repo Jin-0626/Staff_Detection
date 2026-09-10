@@ -93,7 +93,7 @@ That run measured approximately 64.5 tracking calls/sec and 43.3 pipeline frames
 | `test_inteference.py` | Legacy prediction-only video script |
 | `model_export.py` | Export the trained checkpoint to ONNX |
 
-To retrain, prepare the original dataset layout and update the hardcoded paths in `train.py` and `yolo26n.yaml`, then run `python train.py`. It uses 50 epochs, batch size 4, image size 640, two workers and GPU 0. Provide the base `yolo26n.pt` or allow Ultralytics to download it. Retraining is optional and is not part of the MP4 tracking command.
+To retrain, prepare the original dataset layout and update the hardcoded paths in `train.py` and `data.yaml`, then run `python train.py`. It uses 50 epochs, batch size 4, image size 640, two workers and GPU 0. Provide the base `yolo26n.pt` or allow Ultralytics to download it. Retraining is optional and is not part of the MP4 tracking command.
 
 Preparation, training, legacy prediction and export scripts retain local path/device assumptions. Tracking has portable CLI paths and checks video metadata and image-write results. Dependencies specify minimum versions rather than a locked environment.
 
